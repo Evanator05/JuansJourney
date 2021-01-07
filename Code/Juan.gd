@@ -23,7 +23,6 @@ var speedmultiplier = Vector2()
 var dead = 0
 onready var current_level = get_parent()
 
-
 func _process(delta):
 	var lkey = Input.is_action_pressed("ui_left")
 	var rkey = Input.is_action_pressed("ui_right")
@@ -33,10 +32,10 @@ func _process(delta):
 	onfloor = is_on_floor()
 	onwall = is_on_wall()
 	
-	acceleration = 16*144*delta
-	maxspeed = 200*144*delta
-	jumpforce = 450*144*delta
-	gravity = 8*144*delta
+	acceleration = 1000*delta
+	maxspeed = 1000*delta
+	jumpforce = 450*delta
+	gravity = 8*delta
 	
 	#walking
 	movement.x += xDir*acceleration
