@@ -23,7 +23,7 @@ var speedmultiplier = Vector2()
 var dead = 0
 onready var current_level = get_parent()
 var time = 0
-var deltamultiplier = 6.25
+var deltamultiplier = 144
 func _process(delta):
 	var lkey = Input.is_action_pressed("ui_left")
 	var rkey = Input.is_action_pressed("ui_right")
