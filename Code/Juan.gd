@@ -22,7 +22,8 @@ var onwall
 var speedmultiplier = Vector2()
 var dead = 0
 onready var current_level = get_parent()
-
+var time = 0
+var deltamultiplier = 6.25
 func _process(delta):
 	var lkey = Input.is_action_pressed("ui_left")
 	var rkey = Input.is_action_pressed("ui_right")
@@ -32,15 +33,12 @@ func _process(delta):
 	onfloor = is_on_floor()
 	onwall = is_on_wall()
 	
-	acceleration = 1000*delta
-	maxspeed = 1000*delta
-	jumpforce = 450*delta
-	gravity = 8*delta
+	
 	
 	#walking
 	movement.x += xDir*acceleration
 	movement.x = clamp(movement.x,-maxspeed,maxspeed)
-
+	print(delta)
 	if xDir:
 		direction = xDir
 		ap.set_animation("Juan_Walk")
@@ -84,4 +82,4 @@ func _process(delta):
 	if dead == 1:
 		get_tree().reload_current_scene()
 	
-	movement = move_and_slide(movement, UP)
+	movement = move_and_slide(movement*delta*deltamultiplier, UP)
