@@ -3,10 +3,10 @@ extends KinematicBody2D
 
 const UP = Vector2(0,-1)
 var movement = Vector2()
-var acceleration = 16
-var maxspeed = 200
-var jumpforce = 450
-var gravity = 8
+export var acceleration = 16
+export var maxspeed = 200
+export var jumpforce = 450
+export var gravity = 8
 var jump = 0
 var doublejump = 1
 var jumptimer = 0
