@@ -28,11 +28,6 @@ position = Vector2( 447.235, -96.6434 )
 [node name="Spike" parent="GrassTilemap/Spike" instance=ExtResource( 5 )]
 position = Vector2( 32, 0 )
 
-[node name="Juan" parent="." instance=ExtResource( 1 )]
-position = Vector2( 152.765, 202.643 )
-jumpforce = 375
-gravity = 12
-
 [node name="Spike" parent="." instance=ExtResource( 5 )]
 position = Vector2( 280, 264 )
 
@@ -44,3 +39,6 @@ position = Vector2( 472, 40 )
 
 [node name="Spike3" parent="." instance=ExtResource( 5 )]
 position = Vector2( 504, 40 )
+
+[node name="Juan" parent="." instance=ExtResource( 1 )]
+position = Vector2( 136, 216 )

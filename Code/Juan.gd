@@ -33,6 +33,11 @@ func _process(delta):
 	onfloor = is_on_floor()
 	onwall = is_on_wall()
 	
+	acceleration = 16*144*delta
+	maxspeed = 200*144*delta
+	jumpforce = 450*144*delta
+	gravity = 8*144*delta
+	
 	#walking
 	movement.x += xDir*acceleration
 	movement.x = clamp(movement.x,-maxspeed,maxspeed)
