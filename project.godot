@@ -16,11 +16,12 @@ _global_script_class_icons={
 [application]
 
 config/name="JuansJournyRebirth"
-run/main_scene="res://Levels/5-1.tscn"
+run/main_scene="res://Levels/1-1.tscn"
 
-[debug]
+[display]
 
-settings/fps/force_fps=60
+window/stretch/mode="viewport"
+window/stretch/aspect="keep"
 
 [rendering]
 

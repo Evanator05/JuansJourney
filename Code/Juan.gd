@@ -3,10 +3,10 @@ extends KinematicBody2D
 
 const UP = Vector2(0,-1)
 var movement = Vector2()
-export var acceleration = 16
+export var acceleration = 1600
 export var maxspeed = 200
 export var jumpforce = 450
-export var gravity = 8
+export var gravity = 900
 var jump = 0
 var doublejump = 1
 var jumptimer = 0
@@ -23,11 +23,11 @@ var speedmultiplier = Vector2()
 var dead = 0
 onready var current_level = get_parent()
 var time = 0
-var deltamultiplier = 144
 func _process(delta):
 	var lkey = Input.is_action_pressed("ui_left")
 	var rkey = Input.is_action_pressed("ui_right")
 	var jkey = Input.is_action_just_pressed("ui_up")
+	var jkeyr = Input.is_action_just_released("ui_up")
 	xDir = int(rkey) - int(lkey)
 	
 	onfloor = is_on_floor()
@@ -36,7 +36,7 @@ func _process(delta):
 	
 	
 	#walking
-	movement.x += xDir*acceleration
+	movement.x += xDir*acceleration*delta
 	movement.x = clamp(movement.x,-maxspeed,maxspeed)
 	print(delta)
 	if xDir:
@@ -52,16 +52,18 @@ func _process(delta):
 	directionprev = direction
 	
 	#gravity
-	movement.y += gravity
+	movement.y += gravity*delta
 	
 
 	
 	#grounded
 	if onfloor:
-		movement.y = 0
 		jump = 1
 		if not xDir:
 			movement.x = lerp(movement.x,0,0.2)
+	else:
+		if jkeyr and movement.y < -jumpforce/2:
+			movement.y = -jumpforce/2
 	
 	if onwall:
 		jump = 1
@@ -82,4 +84,4 @@ func _process(delta):
 	if dead == 1:
 		get_tree().reload_current_scene()
 	
-	movement = move_and_slide(movement*delta*deltamultiplier, UP)
+	movement = move_and_slide(movement, UP)
