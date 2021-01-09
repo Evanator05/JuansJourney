@@ -126,7 +126,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 } ]
 0/z_index = 0
 
-[node name="1-1" type="Node2D"]
+[node name="Level" type="Node2D"]
 
 [node name="Background" type="Node2D" parent="."]
 

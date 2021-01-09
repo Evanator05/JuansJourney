@@ -13,7 +13,6 @@ var jumptimer = 0
 var jumptimerreset = 10
 var direction = 1
 var xDir = 0
-var directionprev
 onready var ap = $AnimatedSprite
 onready var jumpsound = $JumpSound
 var walljump = 1
@@ -38,18 +37,12 @@ func _process(delta):
 	#walking
 	movement.x += xDir*acceleration*delta
 	movement.x = clamp(movement.x,-maxspeed,maxspeed)
-	print(delta)
 	if xDir:
 		direction = xDir
+		ap.flip_h = xDir < 0
 		ap.set_animation("Juan_Walk")
 	else:
 		ap.set_animation("Juan_Idle")
-	
-	
-	if direction != directionprev:
-		scale.x = -1
-	
-	directionprev = direction
 	
 	#gravity
 	movement.y += gravity*delta
@@ -75,7 +68,7 @@ func _process(delta):
 	#jumping
 	if jumptimer > 0 and jump == 1:
 			if onwall and not onfloor:
-				movement.x = -xDir * maxspeed
+				movement.x = -direction * maxspeed
 			movement.y = -jumpforce
 			jump = 0
 			

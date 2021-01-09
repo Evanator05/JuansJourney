@@ -9,7 +9,7 @@
 [ext_resource path="res://DirtBackgroundTileset.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Sprites/BackgroundCloud.png" type="Texture" id=8]
 
-[node name="1-2" type="Node2D"]
+[node name="Level" type="Node2D"]
 
 [node name="Background" type="Node2D" parent="."]
 
@@ -32,6 +32,14 @@ texture = ExtResource( 8 )
 
 [node name="BackgroundCloud4" type="Sprite" parent="Background/Clouds"]
 position = Vector2( 688, -640 )
+texture = ExtResource( 8 )
+
+[node name="BackgroundCloud5" type="Sprite" parent="Background/Clouds"]
+position = Vector2( 96, -832 )
+texture = ExtResource( 8 )
+
+[node name="BackgroundCloud6" type="Sprite" parent="Background/Clouds"]
+position = Vector2( 736, -928 )
 texture = ExtResource( 8 )
 
 [node name="Spikes" type="Node2D" parent="."]
@@ -151,11 +159,3 @@ tile_data = PoolIntArray( -2555922, 0, 0, -2555921, 0, 1, -2555920, 0, 1, -25559
 
 [node name="Juan" parent="." instance=ExtResource( 1 )]
 position = Vector2( 48, 16 )
-
-[node name="BackgroundCloud" type="Sprite" parent="."]
-position = Vector2( 96, -832 )
-texture = ExtResource( 8 )
-
-[node name="BackgroundCloud2" type="Sprite" parent="."]
-position = Vector2( 736, -928 )
-texture = ExtResource( 8 )
