@@ -36,9 +36,9 @@ extents = Vector2( 14, 15.25 )
 script = ExtResource( 2 )
 
 [node name="EnemySprite" type="AnimatedSprite" parent="."]
-scale = Vector2( -1, 1 )
 frames = SubResource( 5 )
 animation = "enemy_fly"
+frame = 2
 playing = true
 
 [node name="EnemyDamageBox" type="Area2D" parent="."]

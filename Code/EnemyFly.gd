@@ -7,23 +7,23 @@ var acceleration = 1600
 var gravity = 900
 var xdirprev = 0
 var xdir = 1
-onready var player = get_node("root/Level/Juan")
+onready var ap = $EnemySprite
+onready var Player = get_node("/root/Level/Juan")
 func _ready():
 	pass
 
 func _process(delta):
-	movement.y += dir * acceleration
+	movement.y += dir * acceleration*delta
 	movement.y = clamp(movement.y,-maxspeed,maxspeed)
+
+	if Player.position.x > position.x:
+		xdir = 1
+	else:
+		xdir = -1
 	
-	if player != null:
-		if xdir != xdirprev:
-			scale.x = -1
-		
-		if player.position.x > position.x:
-			xdir = 1
-		else:
-			xdir = -1
-		
+	if xdir != xdirprev:
+		ap.flip_h = xdir < 0
+	
 	xdirprev = xdir
 	
 	movement = move_and_slide(movement)
