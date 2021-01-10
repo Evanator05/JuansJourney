@@ -40,10 +40,6 @@ scale = Vector2( 1, -1 )
 position = Vector2( 736, -160 )
 scale = Vector2( 1, -1 )
 
-[node name="Spike30" parent="Spikes" instance=ExtResource( 4 )]
-position = Vector2( 864, -112 )
-scale = Vector2( 1, -0.5 )
-
 [node name="Spike31" parent="Spikes" instance=ExtResource( 4 )]
 position = Vector2( 832, -96 )
 scale = Vector2( 1, -1 )
