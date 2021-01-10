@@ -23,10 +23,12 @@ var dead = 0
 onready var current_level = get_parent()
 var time = 0
 func _process(delta):
-	var lkey = Input.is_action_pressed("ui_left")
-	var rkey = Input.is_action_pressed("ui_right")
-	var jkey = Input.is_action_just_pressed("ui_up")
-	var jkeyr = Input.is_action_just_released("ui_up")
+	var lkey = Input.is_action_pressed("left")
+	var rkey = Input.is_action_pressed("right")
+	var jkey = Input.is_action_just_pressed("jump")
+	var jkeyr = Input.is_action_just_released("jump")
+	var ikey = Input.is_action_just_pressed("jump")
+	var ikeyr = Input.is_action_just_released("jump")
 	xDir = int(rkey) - int(lkey)
 	
 	onfloor = is_on_floor()
