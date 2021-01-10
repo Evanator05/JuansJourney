@@ -1,0 +1,51 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://GrassTilemap.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Door.tscn" type="PackedScene" id=2]
+[ext_resource path="res://DirtBackgroundTileset.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Juan.tscn" type="PackedScene" id=4]
+
+[node name="Level" type="Node2D"]
+
+[node name="Background" type="Node2D" parent="."]
+
+[node name="DirtBackgroundTileset" parent="Background" instance=ExtResource( 3 )]
+tile_data = PoolIntArray( -458736, 0, 0, -458735, 0, 0, -458734, 0, 0, -458733, 0, 0, -393198, 0, 0, -393197, 0, 0, -393196, 0, 0, -327661, 0, 0, -327660, 0, 0, -327659, 0, 0, -262124, 0, 0, -262123, 0, 0, -196587, 0, 0, -196586, 0, 0, -131059, 0, 0, -131058, 0, 0, -131057, 0, 0, -131051, 0, 0, -131050, 0, 0, -131049, 0, 0, -65529, 0, 0, -65528, 0, 0, -65523, 0, 0, -65522, 0, 0, -65521, 0, 0, -65514, 0, 0, -65513, 0, 0, -65512, 0, 0, -65511, 0, 0, -65510, 0, 0, 7, 0, 0, 8, 0, 0, 13, 0, 0, 14, 0, 0, 15, 0, 0, 22, 0, 0, 23, 0, 0, 24, 0, 0, 25, 0, 0, 26, 0, 0 )
+
+[node name="GrassTilemap" parent="." instance=ExtResource( 1 )]
+tile_data = PoolIntArray( -524277, 0, 0, -524276, 0, 0, -524275, 0, 0, -524274, 0, 0, -524273, 0, 0, -524272, 0, 0, -524271, 0, 0, -524270, 0, 0, -524269, 0, 0, -524268, 0, 0, -458747, 0, 0, -458746, 0, 0, -458745, 0, 0, -458744, 0, 0, -458743, 0, 0, -458742, 0, 0, -458732, 0, 0, -458731, 0, 0, -393214, 0, 0, -393213, 0, 0, -393212, 0, 0, -393211, 0, 0, -393195, 0, 0, -393194, 0, 0, -262149, 0, 0, -262148, 0, 0, -262147, 0, 0, -262146, 0, 0, -262145, 0, 0, -327680, 0, 0, -327679, 0, 0, -327678, 0, 0, -327658, 0, 0, -196613, 0, 0, -262122, 0, 0, -262121, 0, 0, -131077, 0, 0, -196595, 0, 0, -196594, 0, 0, -196593, 0, 0, -196585, 0, 0, -196584, 0, 0, -65541, 0, 0, -131065, 0, 0, -131064, 0, 0, -131048, 0, 0, -131047, 0, 0, -131046, 0, 0, -131045, 0, 0, -5, 0, 0, -65509, 0, 0, 65531, 0, 0, 27, 0, 0, 131067, 0, 0, 131068, 0, 0, 131069, 0, 0, 131070, 0, 0, 131071, 0, 0, 65536, 0, 0, 65537, 0, 0, 65538, 0, 0, 65539, 0, 0, 65540, 0, 0, 65541, 0, 0, 65542, 0, 0, 65543, 0, 0, 65544, 0, 0, 65545, 0, 0, 65546, 0, 0, 65547, 0, 0, 65548, 0, 0, 65549, 0, 0, 65550, 0, 0, 65551, 0, 0, 65552, 0, 0, 65553, 0, 0, 65554, 0, 0, 65555, 0, 0, 65556, 0, 0, 65557, 0, 0, 65558, 0, 0, 65559, 0, 0, 65560, 0, 0, 65561, 0, 0, 65562, 0, 0, 65563, 0, 0 )
+
+[node name="Doors" type="Node2D" parent="."]
+
+[node name="Door" parent="Doors" instance=ExtResource( 2 )]
+position = Vector2( 96, 0 )
+world = "1"
+level = "1"
+
+[node name="Door2" parent="Doors" instance=ExtResource( 2 )]
+position = Vector2( 240, -96 )
+world = "1"
+level = "2"
+
+[node name="Door3" parent="Doors" instance=ExtResource( 2 )]
+position = Vector2( 448, -128 )
+world = "1"
+level = "3"
+
+[node name="Door4" parent="Doors" instance=ExtResource( 2 )]
+position = Vector2( 336, 0 )
+world = "1"
+level = "4"
+
+[node name="Juan" parent="." instance=ExtResource( 4 )]
+position = Vector2( -16, 16 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 784.0
+margin_top = -32.0
+margin_right = 864.0
+margin_bottom = 16.0
+text = "Boss will be here"
+__meta__ = {
+"_edit_use_anchors_": false
+}

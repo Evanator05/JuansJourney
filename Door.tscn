@@ -31,4 +31,5 @@ shape = SubResource( 1 )
 position = Vector2( 16, 16 )
 shape = SubResource( 2 )
 [connection signal="body_entered" from="OpenAnimation" to="." method="_on_OpenAnimation_body_entered"]
+[connection signal="body_exited" from="OpenAnimation" to="." method="_on_OpenAnimation_body_exited"]
 [connection signal="body_entered" from="LevelChange" to="." method="_on_LevelChange_body_entered"]
