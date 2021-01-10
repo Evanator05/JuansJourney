@@ -9,14 +9,6 @@
 [ext_resource path="res://Objects/Triggers/EnemyMoveTrigger.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Objects/TileMaps/DirtBackgroundTileset.tscn" type="PackedScene" id=8]
 
-
-
-
-
-
-
-
-
 [node name="Level" type="Node2D"]
 
 [node name="Background" type="Node2D" parent="."]

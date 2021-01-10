@@ -6,12 +6,6 @@
 [ext_resource path="res://Objects/TileMaps/GrassTilemap.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Objects/Enemies/Spike.tscn" type="PackedScene" id=5]
 
-
-
-
-
-
-
 [node name="Level" type="Node2D"]
 
 [node name="GrassTilemap" parent="." instance=ExtResource( 4 )]

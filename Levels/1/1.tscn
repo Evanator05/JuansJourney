@@ -244,6 +244,8 @@ position = Vector2( 1432, -496 )
 
 [node name="Door" parent="." instance=ExtResource( 10 )]
 position = Vector2( 1792, -512 )
+world = "1"
+level = "2"
 
 [node name="GrassTilemap" parent="." instance=ExtResource( 12 )]
 tile_set = SubResource( 11 )
