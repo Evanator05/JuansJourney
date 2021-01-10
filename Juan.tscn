@@ -56,17 +56,6 @@ zoom = Vector2( 0.25, 0.25 )
 drag_margin_top = 0.0
 drag_margin_bottom = 0.35
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Camera2D"]
-margin_left = -199.787
-margin_top = -114.164
-margin_right = -159.787
-margin_bottom = -74.1639
-tab_size = 6
-text = "JUAN"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 7 )
 animation = "Juan_Idle"

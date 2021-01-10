@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://GrassTilemap.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Door.tscn" type="PackedScene" id=2]
-[ext_resource path="res://DirtBackgroundTileset.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Objects/TileMaps/GrassTilemap.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Objects/Triggers/Door.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Objects/TileMaps/DirtBackgroundTileset.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Juan.tscn" type="PackedScene" id=4]
 
 [node name="Level" type="Node2D"]
@@ -37,8 +37,12 @@ position = Vector2( 336, 0 )
 world = "1"
 level = "4"
 
+[node name="Door5" parent="Doors" instance=ExtResource( 2 )]
+position = Vector2( -128, 0 )
+level = "Lobby"
+
 [node name="Juan" parent="." instance=ExtResource( 4 )]
-position = Vector2( -16, 16 )
+position = Vector2( 0, 16 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 margin_left = 784.0
