@@ -10,14 +10,6 @@
 [ext_resource path="res://Objects/TileMaps/DirtBackgroundTileset.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Sprites/BackgroundCloud.png" type="Texture" id=9]
 
-
-
-
-
-
-
-
-
 [node name="Level" type="Node2D"]
 
 [node name="Background" type="Node2D" parent="."]
@@ -334,8 +326,6 @@ tile_data = PoolIntArray( -2883598, 0, 0, -2883597, 0, 1, -2883596, 0, 1, -28835
 
 [node name="Door" parent="." instance=ExtResource( 7 )]
 position = Vector2( 64, -896 )
-world = 1
-level = 4
 
 [node name="Juan" parent="." instance=ExtResource( 1 )]
 position = Vector2( 48, -16 )
